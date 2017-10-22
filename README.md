@@ -1,2 +1,2 @@
-# alfred-loremrocks
+# Lorem Rocks workflow
 Alfred workflow for lorem.rocks
