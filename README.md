@@ -1,7 +1,10 @@
 # Lorem Rocks workflow
-Alfred workflow for lorem.rocks
+Alfred workflow for [lorem.rocks](https://lorem.rocks)
 
 ![Preview](https://raw.githubusercontent.com/splact/lorem-rocks-alfred/master/preview.jpg)
+
+## Download
+Download the latest release from [releases section](https://github.com/Splact/lorem-rocks-alfred/releases).
 
 ## Instructions
 This workflow lets you search for a lorem.rocks dictionary and copy (or directly paste) a paragraph generated at the
