@@ -1,7 +1,7 @@
 import os
 import sys
 
-from workflow import Workflow, ICON_WEB, web
+from workflow import Workflow, web
 
 
 def get_dictionaries():
@@ -33,6 +33,19 @@ def get_thumbnail(dictionary):
     else:
         return 'thumbs/default.png'
 
+def get_dummy_paragraph(dictionary):
+    """Get dummy paragraph from lorem.rocks"""
+    url = "https://api.lorem.rocks/dictionaries/{}/paragraph".format(dictionary)
+    params = dict(format='json')
+    r = web.get(url, params)
+
+    # throw an error if request failed
+    # Workflow will catch this and show it to the user
+    r.raise_for_status()
+
+    result = r.json()
+
+    return result['text']
 
 def main(wf):
     # Get query from Alfred
@@ -42,7 +55,7 @@ def main(wf):
         query = None
 
     # Retrieve dictionaries from cache if available and no more than 1 hour old
-    dictionaries = wf.cached_data('dictionaries', get_dictionaries, max_age=3600)
+    dictionaries = wf.cached_data('dictionaries', get_dictionaries, max_age=7200)
 
     # If script was passed a query, use it to filter dictionaries
     if query:
@@ -52,10 +65,13 @@ def main(wf):
     # the list of results for Alfred
     for dictionary in dictionaries:
         icon = get_thumbnail(dictionary['slug'])
+        text = get_dummy_paragraph(dictionary['slug'])
 
         wf.add_item(title=dictionary['name'],
                     subtitle=dictionary['description'],
-                    arg=dictionary['slug'],
+                    arg=text,
+                    copytext=text,
+                    largetext=text,
                     valid=True,
                     icon=icon)
 

@@ -8,7 +8,7 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>07C24A49-F5B3-4FD0-AEBF-D4A56A4B8960</key>
+		<key>83920540-57EE-4D06-AE1F-D5DB280A4776</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -20,16 +20,13 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-		</array>
-		<key>83920540-57EE-4D06-AE1F-D5DB280A4776</key>
-		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>07C24A49-F5B3-4FD0-AEBF-D4A56A4B8960</string>
+				<string>76F9A7D2-9C13-43CD-B881-E2938F5770F9</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string></string>
+				<string>Auto paste</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -48,35 +45,12 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>python generate.py {query}</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>07C24A49-F5B3-4FD0-AEBF-D4A56A4B8960</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
-				<true/>
+				<false/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
 				<key>transient</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
@@ -132,31 +106,48 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>76F9A7D2-9C13-43CD-B881-E2938F5770F9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>07C24A49-F5B3-4FD0-AEBF-D4A56A4B8960</key>
-		<dict>
-			<key>xpos</key>
-			<integer>450</integer>
-			<key>ypos</key>
-			<integer>150</integer>
-		</dict>
 		<key>6C6D5A50-4B5A-46A2-8AD9-25931CA34316</key>
 		<dict>
 			<key>xpos</key>
-			<integer>690</integer>
+			<integer>560</integer>
 			<key>ypos</key>
-			<integer>150</integer>
+			<integer>80</integer>
+		</dict>
+		<key>76F9A7D2-9C13-43CD-B881-E2938F5770F9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>560</integer>
+			<key>ypos</key>
+			<integer>240</integer>
 		</dict>
 		<key>83920540-57EE-4D06-AE1F-D5DB280A4776</key>
 		<dict>
 			<key>xpos</key>
-			<integer>220</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<integer>150</integer>
+			<integer>160</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
